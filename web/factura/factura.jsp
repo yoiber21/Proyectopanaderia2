@@ -94,7 +94,7 @@
                                         <td><%= fact.getIva()%></td>
                                         <td><%= fact.getFecha()%></td>
                                         <td> <a href="edit.jsp?id_factura=<%=fact.getId()%>" class="align-bottom"><i class="fa fa-pencil">Editar</i></a></td>
-                                        <td><a onclick="return confirmar()" href="eliminar.jsp?FFactura=<%=fact.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
+                                        <td><a  href="eliminar.jsp?FFactura=<%=fact.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
                                     </tr>
                                     <%}%>
                                 </tbody>

@@ -97,7 +97,7 @@
                                         <td><%= emp.getTel2()%></td>
                                         <td><%= emp.getContraseña()%></td>                                
                                         <td> <a  href="edit.jsp?accion=editar&id_empleado=<%= emp.getId()%>" class="align-bottom"><i class="fa fa-pencil">Editar</i></a></td>
-                                        <td><a onclick="return confirmar()" href="delete.jsp?accion=eliminar&id_empleado=<%= emp.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
+                                        <td><a  href="delete.jsp?accion=eliminar&id_empleado=<%= emp.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
 
                                     </tr>
                                     <%}%>

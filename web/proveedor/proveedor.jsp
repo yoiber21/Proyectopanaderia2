@@ -96,7 +96,7 @@
                                         <td><%= pro.getPrecio()%></td>                                
                                         <td> <a href="edit.jsp?accion=editar&id_proveedor=<%= pro.getId()%>" class="align-bottom"><i class="fa fa-pencil">Editar</i></a></td>
                                        
-                                        <td><a onclick="return confirmar()" href="eliminar.jsp?accion=eliminar&id_proveedor=<%= pro.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
+                                        <td><a  href="eliminar.jsp?accion=eliminar&id_proveedor=<%= pro.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
 
                                     </tr>
                                     <%}%>

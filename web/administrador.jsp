@@ -66,78 +66,6 @@
       </div>
     </div>
   </section>
-  <section id="portafolio" class="divisor">
-    <div class="container-fluid">
-      <div class="content-center">
-        <h2>Trabajamos con marcas interesantes para crear <b> productos increibles.</b></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ea consequuntur, odit veniam mollitia aliquam
-          reiciendis dignissimos, vitae sapiente neque, cum dolorum. Suscipit expedita obcaecati nesciunt error ut
-          quidem autem.
-          Manten la calma y come
-          - Aplicacion / Producto digital
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="portfolio-container">
-            <div class="portfolio-detalle">
-              <a href="#">
-                <h2>Keep calm and Eat</h2>
-                <a href="#">
-                  <p>App/digital product</p>
-                </a>
-              </a>
-            </div>
-            <img src="css/img/portfolio-01.jpg" class="img-fluid" alt="portfolio 1">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="portfolio-container">
-            <div class="portfolio-detalle">
-              <a href="#">
-                <h2>Keep calm and Eat</h2>
-                <a href="#">
-                  <p>App/digital product</p>
-                </a>
-              </a>
-            </div>
-            <img src="css/img/relog.jpg" class="img-fluid" alt="portfolio 1">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="portfolio-container">
-            <div class="portfolio-detalle">
-              <a href="#">
-                <h2>Keep calm and Eat</h2>
-                <a href="#">
-                  <p>App/digital product</p>
-                </a>
-              </a>
-            </div>
-            <img src="css/img/bolso.jpg" class="img-fluid" alt="portfolio 1">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="portfolio-container">
-            <div class="portfolio-detalle">
-              <a href="#">
-                <h2>Keep calm and Eat</h2>
-                <a href="#">
-                  <p>App/digital product</p>
-                </a>
-              </a>
-            </div>
-            <img src="css/img/carro.jpg" class="img-fluid" alt="portfolio 1">
-          </div>
-        </div>
-      </div>
-      <div class="text-center topmargin-sm">
-        <p>Listo para acelerar tu proyecto?</p>
-        <a href="#" class="text-dark">Solo avisanos.</a>
-      </div>
-    </div>
-  </section>
-
   <section id="precios" class="divisor">
     <div class="container">
       <div class="content-center">
@@ -261,7 +189,7 @@
     </div>
   </section>
   <section id="pie" class="btn-negro footer">
-    <div class="container"><img src="../../css/img/baguette.png" alt="logo" class="logo-brand">
+    <div class="container"><img src="css/img/baguette.png" alt="logo" class="logo-brand">
       <ul class="list-inline">
         <li class="list-inline-item footer-menu"><a href="#">Inicio</a></li>
         <li class="list-inline-item footer-menu"><a href="#">Acerca de nosotros</a></li>
@@ -285,7 +213,7 @@
             <ion-icon class="icon" name="logo-facebook"></ion-icon>
           </a></li>
       </ul>
-      <small> Â© 2020 Todos los derechos reservados. Creado por Yoiber beitar</small>
+      <small> A&ntildeo © 2020 Todos los derechos reservados. Creado por Yoiber beitar</small>
     </div>
   </section>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -107,7 +107,7 @@
                                         <td><%= inv.getVendidos()%></td>
                                         <td><%= inv.getComprados()%></td>
                                         <td><a href="edit.jsp?id_producto=<%= inv.getProductos()%>" class="align-bottom"><i class="fa fa-pencil">Editar</i></a></td>
-                                        <td><a onclick="return confirmar()" href="delete.jsp?id_producto=<%=inv.getProductos()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
+                                        <td><a  href="delete.jsp?id_producto=<%=inv.getProductos()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
                                     </tr>
                                     <%}%>
                                 </tbody>
