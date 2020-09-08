@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-md-12">
                 <section id="contacto">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card bg-secondary">
@@ -152,8 +152,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="password" class="form-control" name="pass"
-                                                           id="pass"   placeholder="Contraseña" >
+                                                    <input type="password" class="form-control"
+                                                           id="pass"   placeholder="" >
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

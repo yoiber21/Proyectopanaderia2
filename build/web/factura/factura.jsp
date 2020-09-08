@@ -50,9 +50,7 @@
                 </div>
             </div>
         </nav>
-        <div class="row">
-            <div class="col-md-12">
-        <section id="contacto">
+        <section id="contacto" class="divisor">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -62,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7 mt-5" >
+                    <div class="col-md-7 topmargin-sm  justify-content-center align-content-md-start" >
                         <div class="container justify-content-around">
                             <table border="1" class="table table-sm table-hover table-dark"  >
                                 <thead>
@@ -103,7 +101,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-5 mt-5" >
+                    <div class="col-md-5 topmargin-sm" >
                         <div class="row">
                             <form class="form-control" id="fact"  method="POST">
                                 <div class="row">
@@ -154,8 +152,6 @@
                 </div>
             </div>
         </section>
-            </div>
-                                </div>
         <section id="pie" class="btn-negro footer">
             <div class="container"><img src="../css/img/baguette.png" alt="logo" class="logo-brand">
                 <ul class="list-inline">
