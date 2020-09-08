@@ -1,5 +1,4 @@
-
-
+<%@page import="controlador.inicio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 <!DOCTYPE html>
@@ -13,7 +12,7 @@
     </head>
     <body>
         <div class="container personalizada col-lg-3">
-            <form action="iniciar" method="POST" onsubmit="return caracteres()">
+            <form action="index.jsp" method="POST" onsubmit="return caracteres()">
                 <div class="form-group text-center">
                     <img src="css/img/login2.png" width="80" height="80"/>
                     <p><strong>Inicio de sesion</strong></p>
@@ -33,6 +32,36 @@
             </form>
         </div>
     </body>
+    <%
+        inicio ini=new inicio();
+        if (request.getParameter("accion")!=null) {
+                String email=request.getParameter("Identificacion");
+                String pass=request.getParameter("Password");
+                HttpSession sesion=request.getSession();
+                switch(ini.loguear(email, pass)){
+                    case 1:
+                        sesion.setAttribute("email", email);
+                        sesion.setAttribute("nivel", "1");
+                        response.sendRedirect("administrador.jsp");
+                    break;
+                      case 2:
+                        sesion.setAttribute("email", email);
+                        sesion.setAttribute("nivel", "2");
+                        response.sendRedirect("Empleado/EmpleadoInicio.jsp");
+                    break;
+                    default:
+                        %>
+                        <script>
+                            alert("Usuario no existe, o clave incorrecta");
+                        </script>
+                        <%
+                    break;
+                }
+            }
+if (request.getParameter("cerrar")!=null) {
+        session.invalidate();
+    }
+    %>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>

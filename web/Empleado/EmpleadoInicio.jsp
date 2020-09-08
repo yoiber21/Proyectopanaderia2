@@ -7,18 +7,18 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,600;1,400&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/miestilo.css" type="text/css">
+  <link rel="stylesheet" href="../css/miestilo.css" type="text/css">
   <title>Pagina principal</title>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#" id="panaderia"><img src="css/img/baguette.png" class="logo-brand"
+      <a class="navbar-brand" href="#" id="panaderia"><img src="../css/img/baguette.png" class="logo-brand"
           alt="logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.jsp?cerrar=false" id="inicio">Cerrar</a>
+            <a class="nav-link" href="../index.jsp" id="inicio">Cerrar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="proveedor/proveedor.jsp" id="proveedor">Proveedor</a>
@@ -43,9 +43,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="inventario/inventario.jsp" id="inventario">Inventario</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="empleados/ReEmpleado.jsp" id="productos">Registrar</a>
           </li>
         </ul>
       </div>
@@ -189,7 +186,7 @@
     </div>
   </section>
   <section id="pie" class="btn-negro footer">
-    <div class="container"><img src="css/img/baguette.png" alt="logo" class="logo-brand">
+    <div class="container"><img src="../css/img/baguette.png" alt="logo" class="logo-brand">
       <ul class="list-inline">
         <li class="list-inline-item footer-menu"><a href="#">Inicio</a></li>
         <li class="list-inline-item footer-menu"><a href="#">Acerca de nosotros</a></li>
@@ -216,22 +213,7 @@
       <small> A&ntildeo © 2020 Todos los derechos reservados. Creado por Yoiber beitar</small>
     </div>
   </section>
-  <%
-      HttpSession sesion=request.getSession();
-      String email;
-      String nivel;
-      if (sesion.getAttribute("email")!=null && sesion.getAttribute("nivel")!=null) {
-              email=sesion.getAttribute("email").toString();
-              nivel=sesion.getAttribute("nivel").toString();    
-          }else{
-            %>
-            <script>
-                location.replace("index.jsp");
-            </script>
-            <%
-      }
-  %> 
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

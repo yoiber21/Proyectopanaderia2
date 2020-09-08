@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.jsp" id="inicio">Cerrar</a>
+            <a class="nav-link" href="index.jsp?cerrar=false" id="inicio">Cerrar</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="proveedor/proveedor.jsp" id="proveedor">Proveedor</a>
@@ -216,7 +216,22 @@
       <small> A&ntildeo © 2020 Todos los derechos reservados. Creado por Yoiber beitar</small>
     </div>
   </section>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  <%
+      HttpSession sesion=request.getSession();
+      String email;
+      String nivel;
+      if (sesion.getAttribute("email")!=null && sesion.getAttribute("nivel")!=null) {
+              email=sesion.getAttribute("email").toString();
+              nivel=sesion.getAttribute("nivel").toString();    
+          }else{
+            %>
+            <script>
+                location.replace("index.jsp");
+            </script>
+            <%
+      }
+  %> 
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
