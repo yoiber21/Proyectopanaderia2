@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public class Reusuario extends conexion {
 
-    public boolean registrar(String identificacion, String nombre, String apellido, String email, String direccion, String tel1, String tel2, String contraseña) {
+    public boolean registrar(String identificacion, String nombre, String apellido, String email, String direccion, String tel1, String tel2, String contraseña,String nivel) {
         PreparedStatement pst = null;
         try {
             // creamos la conuslta para insertar a la base de datos
             String consulta = "insert into usuario(id_usuario,nom_usuario,apellido_usuario,email,"
-                    + "direccion,telefono_1,telefono_2,contraseña)values("
-                    + "?,?,?,?,?,?,?,?)";
+                    + "direccion,telefono_1,telefono_2,contraseña,nivel)values("
+                    + "?,?,?,?,?,?,?,?,?)";
             // preparamos la consulta con la conexion
             pst = getconexion().prepareStatement(consulta);
             // pasamos cada uno de los parametros
@@ -25,7 +25,7 @@ public class Reusuario extends conexion {
             pst.setString(6, tel1);
             pst.setString(7, tel2);
             pst.setString(8, contraseña);
-
+            pst.setString(9, nivel);
             // creamos una condicion que si la variable pst recibio un dato nos retorne true que es verdadero
             if (pst.executeUpdate() == 1) {
                 return true;

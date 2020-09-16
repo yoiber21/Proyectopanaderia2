@@ -10,11 +10,13 @@ public class empleados {
     String tel1;
     String tel2;
     String contraseña;
+    int level;
 
     public empleados() {
     }
 
-    public empleados(String nombre, String apellidos, String email, String direccion, String tel1, String tel2, String contraseña) {
+    public empleados(int id, String nombre, String apellidos, String email, String direccion, String tel1, String tel2, String contraseña, int level) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
@@ -22,6 +24,7 @@ public class empleados {
         this.tel1 = tel1;
         this.tel2 = tel2;
         this.contraseña = contraseña;
+        this.level = level;
     }
 
     public int getId() {
@@ -86,6 +89,14 @@ public class empleados {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
-    }    
+    }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+    
 }

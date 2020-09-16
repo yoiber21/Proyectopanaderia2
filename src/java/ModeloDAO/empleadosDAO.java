@@ -37,6 +37,7 @@ empleados e=new empleados();
                 emp.setTel1(rs.getNString("telefono_1"));
                 emp.setTel2(rs.getNString("telefono_2"));
                 emp.setContraseña(rs.getNString("contraseña"));
+                emp.setLevel(rs.getInt("nivel"));
                 list.add(emp);
                 
             }
@@ -62,6 +63,7 @@ empleados e=new empleados();
                 e.setTel1(rs.getNString("telefono_1"));
                 e.setTel2(rs.getNString("telefono_2"));
                 e.setContraseña(rs.getNString("contraseña"));
+                e.setLevel(rs.getInt("nivel"));
                 
             }
             
@@ -74,9 +76,9 @@ empleados e=new empleados();
     // aqui estaba tratando de hacer ese actualizar pero no me dio la verdad y admeas como he estado estos dias asi no me ha dado la cabeza para hacer eso
     public boolean add(empleados emp) {
        String sql="insert into usuario(id_usuario,nom_usuario,apellido_usuario,email,"
-               + "direccion,telefono_1,telefono_2,contraseña)values('"+emp.getId()+"','"+emp.getNombre()+"',"
+               + "direccion,telefono_1,telefono_2,contraseña,nivel)values('"+emp.getId()+"','"+emp.getNombre()+"',"
                + "'"+emp.getApellidos()+"','"+emp.getEmail()+"','"+emp.getDireccion()+"','"+emp.getTel1()+"',"
-               + "'"+emp.getTel2()+"','"+emp.getContraseña()+"')";
+               + "'"+emp.getTel2()+"','"+emp.getContraseña()+"','"+emp.getLevel()+"')";
         try {
             con=cn.getconexion();
             ps=con.prepareStatement(sql);
@@ -91,7 +93,7 @@ empleados e=new empleados();
     public boolean edit(empleados emp) {
         String sql="update usuario set nom_usuario=?,apellido_usuario=?,"
                 + "email=?,direccion=?,telefono_1=?,"
-                + "telefono_2=?,contraseña=? where id_usuario=?";
+                + "telefono_2=?,contraseña=?,nivel=? where id_usuario=?";
         try {
             con=cn.getconexion();
             ps=con.prepareStatement(sql);

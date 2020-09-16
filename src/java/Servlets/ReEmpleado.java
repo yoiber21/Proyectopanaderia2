@@ -17,43 +17,25 @@ public class ReEmpleado extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         // capturamos los datos de los input en ReEmpleado.jsp
         try (PrintWriter out = response.getWriter()) {
-        String identificacion = String.valueOf(request.getParameter("ide"));
-        String nombre = request.getParameter("nom");
-        String apellido = request.getParameter("ape");
+        String identi = String.valueOf(request.getParameter("ide"));
+        String nom = request.getParameter("nom");
+        String apell= request.getParameter("ape");
         String correo= request.getParameter("corr");
-        String direccion = request.getParameter("dir");
-        String tel1 = request.getParameter("tel1");
-        String tel2 = request.getParameter("tel2");
-        String contraseña = request.getParameter("cont");
-        
+        String direcc = request.getParameter("dir");
+        String teluno = request.getParameter("tel1");
+        String teldos = request.getParameter("tel2");
+        String contra = request.getParameter("cont");
+        String level= request.getParameter("nive");
         // enviamos los datos a la base de datos
         Reusuario em=new Reusuario();
-        if (em.registrar(identificacion, nombre, apellido,correo, tel1, tel2, direccion, contraseña)) {
+        if (em.registrar(identi, nom, apell, correo, direcc, teluno, teldos, contra, level)) {
           
-        }
+        } else {
+            }
         } catch (Exception e) {
             System.out.println("Servlets.ReEmpleado.processRequest()");
         }
-        
-        
-        
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
+           
     }
 
 }

@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-md-4 topmargin-sm ">
                         <div class="row">
-                            <form id="Reventa" method="post" class="form-control">
+                            <form id="Reventa"  class="form-control">
                                 <div class="row">
                                     <legend class="text-center  header">Registre ventas</legend>
                                     <div class="col-md-6">
@@ -111,7 +111,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select  class="form-control borrar" id="factura1" placeholder="Nombre de producto">
+                                            <select  class="form-control borrar" id="factura1">
                                                 <%
                                                     conexion cn = new conexion();
                                                     PreparedStatement pst = null;
@@ -123,7 +123,7 @@
                                                         rs = pst.executeQuery();
                                                         while (rs.next()) {
                                                             conexion c = new conexion();
-                                                            out.println("<option  id='cambiar'>" + rs.getInt(2) + "</option>");
+                                                            out.println("<option>" + rs.getInt(2) + "</option>");
                                                         }
                                                     } catch (Exception e) {
                                                         out.print(e.toString());
@@ -135,7 +135,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select  class="form-control" id="producto1" placeholder="Nombre de producto">
+                                            <select  class="form-control" id="producto1">
                                                 <%
                                                     try {
                                                         cn.getconexion();
