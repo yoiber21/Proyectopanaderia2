@@ -28,9 +28,17 @@ public class ReEmpleado extends HttpServlet {
         // enviamos los datos a la base de datos
         Reusuario em=new Reusuario();
         if (em.registrar(identi, nom, apell, correo, direcc, teluno, teldos, contra, level)) {
-           System.out.print("Registrado");
+           response.sendRedirect("empleados/Reempleado.jsp");
         } else {
-            System.out.print("Error");
+                       out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet NewServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<script>alert error</scrip>");
+            out.println("</body>");
+            out.println("</html>");
             }
         }
            
