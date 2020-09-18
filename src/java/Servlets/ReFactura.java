@@ -20,9 +20,7 @@ public class ReFactura extends HttpServlet {
             String producto=String.valueOf(request.getParameter("product"));
             String fecha =request.getParameter("fech"); 
             String numero=String.valueOf(request.getParameter("numer"));
-            String iva =String.valueOf(request.getParameter("Iva"));
-                 
-                    
+            String iva =String.valueOf(request.getParameter("Iva"));       
             Refactura fact=new Refactura();
             if (fact.registrar(identificacion, nit, precio,producto,fecha, numero, iva)) {
                 response.sendRedirect("/js/Validacion.js");
