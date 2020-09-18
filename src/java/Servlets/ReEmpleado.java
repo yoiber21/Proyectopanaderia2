@@ -30,13 +30,13 @@ public class ReEmpleado extends HttpServlet {
         if (em.registrar(identi, nom, apell, correo, direcc, teluno, teldos, contra, level)) {
            response.sendRedirect("empleados/Reempleado.jsp");
         } else {
-                       out.println("<!DOCTYPE html>");
+            out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet NewServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<script>alert error</scrip>");
+            out.println("<script>alert('error')</scrip>");
             out.println("</body>");
             out.println("</html>");
             }
