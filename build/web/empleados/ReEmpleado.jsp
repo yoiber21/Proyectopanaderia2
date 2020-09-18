@@ -109,60 +109,57 @@
                             </div>
                             <div class="col-md-4 mt-5">
                                 <div class="row">
-                                    <form class="form-control" id="ReEmpleados" method="post">
+                                    <form  action="../RegistreEmpleado" class="form-control">
                                         <div class="row">
                                             <legend class="text-center header">Registrar usuarios</legend>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control" 
-                                                           placeholder="Identificacion" id="Usuarios">
+                                                           placeholder="Identificacion" name="" name="ususario">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Nombres" id="Nombres" >
+                                                    <input type="text" class="form-control" placeholder="Nombres" name="nombres" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Apellidos" id="Apellidos" >
+                                                    <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Correo" id="Correos" >
+                                                    <input type="email" class="form-control" placeholder="Correo" name="correo" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control"  placeholder="Direccion"
-                                                           id="Direcciones" >
+                                                           name="direccion" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"  placeholder="Telefono 1"
-                                                           id="Tels1"  >
+                                                           name="Tel1"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"
-                                                           id="Tels2"  placeholder="Telefono 2" >
+                                                           name="Tel2"  placeholder="Telefono 2" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="password" class="form-control"
-                                                           id="Passs"   placeholder="" >
+                                                           name="pass"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="">
-                                                    <select id="Nivels">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                    </select>
+                                                <div class="form-group">
+                                                    <input type="number" class="form-control" name="nivel" placeholder="Ingrese nivel">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -216,6 +213,6 @@
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/3ba937e77e.js" crossorigin="anonymous"></script>
-    <script src="../js/ValidarEmpleado.js" type="text/javascript"></script>
+
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

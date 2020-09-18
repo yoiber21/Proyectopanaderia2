@@ -11,8 +11,7 @@ public class Reusuario extends conexion {
         try {
             // creamos la conuslta para insertar a la base de datos
             String consulta = "insert into usuario(id_usuario,nom_usuario,apellido_usuario,email,"
-                    + "direccion,telefono_1,telefono_2,contraseña,nivel)values("
-                    + "?,?,?,?,?,?,?,?,?)";
+                    + "direccion,telefono_1,telefono_2,contraseña,nivel)values(?,?,?,?,?,?,?,?,?)";
             // preparamos la consulta con la conexion
             pst = getconexion().prepareStatement(consulta);
             // pasamos cada uno de los parametros
@@ -30,6 +29,7 @@ public class Reusuario extends conexion {
             if (pst.executeUpdate() == 1) {
                 return true;
             }
+            System.out.println("exito");
             // si ocurre algun error nos imprima ese error en estas lineas
         } catch (SQLException e) {
             System.err.println("tenes un eror en :" + e);
