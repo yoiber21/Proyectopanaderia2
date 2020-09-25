@@ -64,6 +64,10 @@
         <servlet-name>Empleados</servlet-name>
         <servlet-class>controlador.Empleados</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Registrar</servlet-name>
+        <servlet-class>Servlets.Registrar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>control</servlet-name>
         <url-pattern>/control</url-pattern>
@@ -127,6 +131,10 @@
     <servlet-mapping>
         <servlet-name>Empleados</servlet-name>
         <url-pattern>/Empleados</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registrar</servlet-name>
+        <url-pattern>/Registrese</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

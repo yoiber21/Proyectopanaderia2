@@ -37,7 +37,7 @@ empleados e=new empleados();
                 emp.setTel1(rs.getNString("telefono_1"));
                 emp.setTel2(rs.getNString("telefono_2"));
                 emp.setContraseña(rs.getNString("contraseña"));
-                emp.setLevel(rs.getInt("nivel"));
+                emp.setLevel(rs.getString("nivel"));
                 list.add(emp);
                 
             }
@@ -63,7 +63,7 @@ empleados e=new empleados();
                 e.setTel1(rs.getNString("telefono_1"));
                 e.setTel2(rs.getNString("telefono_2"));
                 e.setContraseña(rs.getNString("contraseña"));
-                e.setLevel(rs.getInt("nivel"));
+                e.setLevel(rs.getString("nivel"));
                 
             }
             

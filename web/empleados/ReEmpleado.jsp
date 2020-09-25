@@ -109,13 +109,13 @@
                             </div>
                             <div class="col-md-4 mt-5">
                                 <div class="row">
-                                    <form  action="../RegistreEmpleado" class="form-control">
+                                    <form action="../RegistreEmpleado">
                                         <div class="row">
                                             <legend class="text-center header">Registrar usuarios</legend>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control" 
-                                                           placeholder="Identificacion" name="" name="ususario">
+                                                           placeholder="Identificacion" name="usuarios">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -135,20 +135,20 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control"  placeholder="Direccion"
+                                                    <input type="text" class="form-control"  placeholder="direccion"
                                                            name="direccion" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"  placeholder="Telefono 1"
-                                                           name="Tel1"  >
+                                                           name="tel1"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"
-                                                           name="Tel2"  placeholder="Telefono 2" >
+                                                           name="tel2"  placeholder="Telefono 2" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

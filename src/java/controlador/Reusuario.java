@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Reusuario extends conexion {
 
-    public boolean registrar(String identificacion, String nombre, String apellido, String email, String direccion, String tel1, String tel2, String contraseña,String nivel) {
+    public boolean registrar(int identificacion, String nombre, String apellido, String email, String direccion, String tel1, String tel2, String contraseña,int nivel) {
         PreparedStatement pst = null;
         try {
             // creamos la conuslta para insertar a la base de datos
@@ -16,7 +16,7 @@ public class Reusuario extends conexion {
             pst = getconexion().prepareStatement(consulta);
             // pasamos cada uno de los parametros
             // en la primera pasad de datos convertimos la variable ide de string a int 
-            pst.setString(1, identificacion);
+            pst.setInt(1, identificacion);
             pst.setString(2, nombre);
             pst.setString(3, apellido);
             pst.setString(4, email);
@@ -24,7 +24,7 @@ public class Reusuario extends conexion {
             pst.setString(6, tel1);
             pst.setString(7, tel2);
             pst.setString(8, contraseña);
-            pst.setString(9, nivel);
+            pst.setInt(9, nivel);
             // creamos una condicion que si la variable pst recibio un dato nos retorne true que es verdadero
             if (pst.executeUpdate() == 1) {
                 return true;
@@ -46,7 +46,7 @@ public class Reusuario extends conexion {
                 }
                 // si hay algun error nos imprima ese error
             } catch (SQLException e) {
-                System.err.println("tenes un eror en :" + e);
+                System.err.println("tenes un eror e:" + e);
             }
         }
 

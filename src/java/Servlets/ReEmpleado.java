@@ -1,76 +1,76 @@
 package Servlets;
+
 /*estos son los servlets para insertar todos estan es la carpeta "serlvelts"* ahi como ves esta el codigo comentado
 solo en esta */
+import ModeloDAO.EmpleadoDAO;
+import ModeloDAO.empleadosDAO;
 import controlador.Reusuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import modelo.empleados;
 
 public class ReEmpleado extends HttpServlet {
+    String add="empleados/ReEmpleado.jsp";
+    private empleadosDAO dao = new empleadosDAO();
+    private empleados e=new empleados();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        // capturamos los datos de los input en ReEmpleado.jsp
-        try (PrintWriter out = response.getWriter()) {
-        String identi = String.valueOf(request.getParameter("usuario"));
-        String nom = request.getParameter("nombres");
-        String apell= request.getParameter("apellidos");
-        String correo= request.getParameter("correo");
-        String direcc = request.getParameter("direccion");
-        String teluno = request.getParameter("tel1");
-        String teldos = request.getParameter("tel2");
-        String contra = request.getParameter("pass");
-        String level=String.valueOf(request.getParameter("nivel"));
-        // enviamos los datos a la base de datos
-        Reusuario empleado=new Reusuario();
-        if (empleado.registrar(identi, nom, apell, correo, direcc, teluno, teldos, contra, level)) {
-           response.sendRedirect("empleados/Reempleado.jsp");
-        } else {
-          response.sendRedirect("index.jsp");
-            }
-        }
-           
+	    throws ServletException, IOException {
+	response.setContentType("text/html;charset=UTF-8");
+	// capturamos los datos de los input en ReEmpleado.jsp
+	try (PrintWriter out = response.getWriter()) {
+	}
+
     }
-   // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+	    throws ServletException, IOException {
+	String acceso="";
+	String accion=request.getParameter("accion");
+  
+            if (accion.equalsIgnoreCase("agregar")) {
+                
+	    int identi = Integer.parseInt(request.getParameter("usuarios"));
+	    String nom = request.getParameter("nombres");
+	    String apell = request.getParameter("apellidos");
+	    String correo = request.getParameter("correo");
+	    String direcc = request.getParameter("direccion");
+	    String tel1 = request.getParameter("tel1");
+	    String tel2 = request.getParameter("tel2");
+	    String contra = request.getParameter("pass");
+	    String level = request.getParameter("nivel");
+	    e.setId(identi);
+	    e.setNombre(nom);
+	    e.setApellidos(apell);
+	    e.setEmail(correo);
+	    e.setDireccion(direcc);
+	    e.setTel1(tel1);
+	    e.setTel2(tel2);
+	    e.setContraseña(contra);
+	    e.setLevel(level);
+	    dao.add(e);
+            response.sendRedirect("empleados/ReEmpleado.jsp");
+	    
+	    
+	}
+        
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+	    throws ServletException, IOException {
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
-        return "Short description";
+	return "Short description";
     }// </editor-fold>
 }

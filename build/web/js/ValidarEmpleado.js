@@ -19,7 +19,7 @@ $(document).ready(function () {
             });
             return false;
         }else {
-            ruta = "ide=" + usuario + "&nom=" + nombre + "&ape=" + apellido + "&corr=" + correo + "&dir=" + direccion + "&tel1=" + tel1 + "&tel2=" + tel2 + "&cont=" + pass+ "&nive=" + level;
+            ruta = "usuarios=" + usuario + "&nombres=" + nombre + "&apellidos=" + apellido + "&correo=" + correo + "&direccion=" + direccion + "&tel1=" + tel1 + "&tel2=" + tel2 + "&pass=" + pass+ "&nivel=" + level;
             $.get({
                 url: "../RegistreEmpleado",
                 type: "post",

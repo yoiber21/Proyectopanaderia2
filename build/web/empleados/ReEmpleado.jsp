@@ -109,57 +109,57 @@
                             </div>
                             <div class="col-md-4 mt-5">
                                 <div class="row">
-                                    <form  action="../RegistreEmpleado" class="form-control">
+                                    <form class="form-control"  id="registrar" method="POST">
                                         <div class="row">
                                             <legend class="text-center header">Registrar usuarios</legend>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control" 
-                                                           placeholder="Identificacion" name="" name="ususario">
+                                                           placeholder="Identificacion" name="usuario">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Nombres" name="nombres" >
+                                                    <input type="text" class="form-control" placeholder="Nombres" id="nombre" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" >
+                                                    <input type="text" class="form-control" placeholder="Apellidos" id="apellido" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" placeholder="Correo" name="correo" >
+                                                    <input type="email" class="form-control" placeholder="Correo" id="correo" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control"  placeholder="Direccion"
-                                                           name="direccion" >
+                                                    <input type="text" class="form-control"  placeholder="direccion"
+                                                           id="direccion" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"  placeholder="Telefono 1"
-                                                           name="Tel1"  >
+                                                           id="tel1"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="number" class="form-control"
-                                                           name="Tel2"  placeholder="Telefono 2" >
+                                                           id="tel2"  placeholder="Telefono 2" >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <input type="password" class="form-control"
-                                                           name="pass"  >
+                                                           id="pass"  >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="number" class="form-control" name="nivel" placeholder="Ingrese nivel">
+                                                    <input type="number" class="form-control" id="nivel" placeholder="Ingrese nivel">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -204,7 +204,10 @@
             </div>
         </section>
     </body>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -213,6 +216,6 @@
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/3ba937e77e.js" crossorigin="anonymous"></script>
-
+    <script src="../js/Validar.js" type="text/javascript"></script> 
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

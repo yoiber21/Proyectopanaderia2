@@ -75,6 +75,7 @@
                                 <th scope="col" style="font-size: 10px">Telefono 1</th>
                                 <th scope="col" style="font-size: 10px">Telefono 2</th>
                                 <th scope="col" style="font-size: 10px">Contraseña</th>
+				<th scope="col" style="font-size: 10px">Nivel</th>
                                 <th scope="col" class="text-center" colspan="2" style="font-size: 10px">Acciones</th>
                                 </tr>
                                 </thead>
@@ -89,7 +90,7 @@
 
                                 %>
                                 <tbody>
-                                    <tr class="text-white" style="font-size: 10px">
+                                    
                                         <td ><%= emp.getId()%></td>
                                         <td><%= emp.getNombre()%></td>
                                         <td><%= emp.getApellidos()%></td>
@@ -97,11 +98,12 @@
                                         <td><%= emp.getDireccion()%></td>
                                         <td><%= emp.getTel1()%></td>
                                         <td><%= emp.getTel2()%></td>
-                                        <td><%= emp.getContraseña()%></td>                                
+                                        <td><%= emp.getContraseña()%></td> 
+					<td><%=emp.getLevel()%></td>
                                         <td> <a  href="edit.jsp?accion=editar&id_empleado=<%= emp.getId()%>" class="align-bottom"><i class="fa fa-pencil">Editar</i></a></td>
                                         <td><a href="delete.jsp?accion=eliminar&id_empleado=<%= emp.getId()%>" class="text-center"><i class="fas fa-trash-alt red">Eliminar</i></ion-icon></a></td>
 
-                                    </tr>
+                                    
                                     <%}%>
                                 </tbody>
                             </table>
@@ -173,6 +175,11 @@
                                                    value="<%=rs.getString("contraseña")%>" placeholder="Contraseña" >
                                         </div>
                                     </div>
+					 <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="number" class="form-control" name="nivel" value="<%=rs.getString("nivel")%>" placeholder="Ingrese nivel">
+                                                </div>
+                                            </div>
                                     <div class="col-md-6">
                                         <input type="Submit" id="proveedorid" value="Actualizar" class="btn btn-negro full-width">
                                     </div>
@@ -235,25 +242,27 @@ crossorigin="anonymous"></script>
 <%
     //se toman los valores de los espacion donde estabn los datos del proveedor
 
-    String id_administrador = request.getParameter("id_administrador");
+    String id_administrador = request.getParameter("id");
     String nom_usuario = request.getParameter("nom_usuario");
     String apellido_usuario = request.getParameter("apellido_usuario");
     String email = request.getParameter("email");
-    String direccion = (request.getParameter("direccion"));
-    String telefono_1 = (request.getParameter("telefono_1"));
-    String telefono_2 = (request.getParameter("telefono_2"));
-    String contraseña = (request.getParameter("contrasena"));
+    String direccion = request.getParameter("direccion");
+    String telefono_1 = request.getParameter("telefono_1");
+    String telefono_2 = request.getParameter("telefono_2");
+    String contraseña = request.getParameter("pass");
+    String nivel=request.getParameter("nivel");
 
 //si alguno de los datos tiene al menos un valor se ejecutara el update
-    if (id_administrador != null || nom_usuario != null || apellido_usuario != null || email != null || direccion != null || telefono_1 != null || telefono_2 != null || contraseña != null) {
+    if (id_administrador != null || nom_usuario != null || apellido_usuario != null || email != null || direccion != null || telefono_1 != null || telefono_2 != null || contraseña != null || nivel!=null) {
 
         //se esrcibe el codigo update y los valores que se le ponen son los mismos que estaban en los input donde aparecian los datos del proveedor 
         ps = con.getconexion().prepareStatement("update Usuario set nom_usuario='" + nom_usuario + "',"
                 + " apellido_usuario='" + apellido_usuario + "', email='" + email + "', telefono_1='" + telefono_1 + "',"
-                + "telefono_2='" + telefono_2 + "', contraseña='" + contraseña + "' where id_usuario='" + id + "'");
+                + "telefono_2='" + telefono_2 + "', contraseña='" + contraseña + "', nivel='" + nivel + "' where id_usuario='" + id + "'");
 
         //se ejecuta el update y se redirecciona la pagina esto con el fin de que se detecten los datos escritos en los input
         ps.executeUpdate();
-        response.sendRedirect("ReEmpleado.jsp");
+        
+        response.sendRedirect("../ReEmpleado.jsp");
     }
 %>

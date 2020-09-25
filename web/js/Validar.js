@@ -1,4 +1,54 @@
 $(document).ready(function () {
+    $('#registrar').submit(function (e) {
+        usuario = document.getElementById('usuario').value;
+        nombre = document.getElementById('nombre').value;
+        apellido = document.getElementById('apellido').value;
+        correo = document.getElementById('correo').value;
+        direccion = document.getElementById('direccion').value;
+        tel1 = document.getElementById('tel1').value;
+        tel2 = document.getElementById('tel2').value;
+        pass = document.getElementById('pass').value;
+        level = document.getElementById('nivel').value;
+        if (usuario.length === 0 || nombre.length===0 || apellido.length===0 || correo.length===0 || direccion.length===0 ||
+                tel1.length===0 || tel2.length===0 || pass.length===0 || level.length===0) {
+            swal({
+                title: "Error!",
+                text: "Digite todos los datos por favor!",
+                icon: "error",
+                button: "Cerrar!"
+            });
+            return false;
+        }else {
+            ruta = "usuarios=" + usuario + "&nombres=" + nombre + "&apellidos=" + apellido + "&correo=" + correo + "&direccion=" + direccion + "&tel1=" + tel1 + "&tel2=" + tel2 + "&pass=" + pass+ "&nivel=" + level;
+            $.get({
+                url: "../RegistreEmpleado",
+                type: "post",
+                data: ruta,
+                success: function () {
+                    swal({
+                        title: "Buen Trabajo!",
+                        text: "El empleado " + nombre + " se ha insertado Correctamente!",
+                        icon: "success",
+                        button: "Cerrar!"
+                    });
+                },
+                error: function (e) {
+                    swal({
+                        title: "Error!",
+                        text: "Error al insertar!",
+                        icon: "error",
+                        button: "Cerrar!"
+                    });
+                }
+            });
+            $('#enviar').trigger('reset');
+            e.preventDefault();
+            return false;
+        }
+    });
+});
+
+$(document).ready(function () {
     $('#fact').submit(function (e) {
         factura = document.getElementById('Factura').value;
         nit = document.getElementById('nit').value;
